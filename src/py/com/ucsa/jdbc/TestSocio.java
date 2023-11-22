@@ -34,13 +34,15 @@ public class TestSocio {
 		
 		System.out.println("---");
 		System.out.println("4 DAOFactory.getExposicionDao().insertar()");
-		Exposicion ex = new Exposicion();
+		Exposicion ex = new Exposicion(3);
 		ex.setNombre("cabal");
 		ex.setDescripcion("expo cabal");
+		ex.setOrganiza("bepsa lab");;
 		ex.setFechaExpo( DateUtil.getLocalDateTime("2023-11-21 12:00:00") );
 		ex.setFechaCreacion( DateUtil.getLocalDateTime("2023-11-21 12:30:00") );
 		ex.setUsuarioCreacion( new Usuario(1));
 		//DAOFactory.getExposicionDao().insertar(ex);
+		//DAOFactory.getExposicionDao().modificar(ex);
 		System.out.println(ex.toString());
 		
 		
