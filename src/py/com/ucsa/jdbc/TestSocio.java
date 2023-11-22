@@ -3,6 +3,7 @@ package py.com.ucsa.jdbc;
 import java.sql.Date;
 
 import py.com.ucsa.jdbc.dao.DAOFactory;
+import py.com.ucsa.jdbc.dto.Exposicion;
 import py.com.ucsa.jdbc.dto.Opcion;
 import py.com.ucsa.jdbc.dto.Socio;
 import py.com.ucsa.jdbc.dto.Usuario;
@@ -13,11 +14,35 @@ public class TestSocio {
 	public static void main(String[] args) {
 
 		System.out.println("1 DAOFactory.getSocioDao().listar()");
-		Integer idgenerado=0;
 		
 		DAOFactory.getSocioDao().listar().forEach((n) -> {
 			System.out.println(n.toString());
 		});
+		
+		System.out.println("---");
+		System.out.println("2 DAOFactory.getRolUsuarioDao().listar()");
+		DAOFactory.getRolUsuarioDao().listar().forEach((n) -> {
+			System.out.println(n.toString());
+		});
+		
+		System.out.println("---");
+		System.out.println("3 DAOFactory.getExposicionDao().listar()");
+		DAOFactory.getExposicionDao().listar().forEach((n) -> {
+			System.out.println(n.toString());
+		});
+		
+		
+		System.out.println("---");
+		System.out.println("4 DAOFactory.getExposicionDao().insertar()");
+		Exposicion ex = new Exposicion();
+		ex.setNombre("cabal");
+		ex.setDescripcion("expo cabal");
+		ex.setFechaExpo( DateUtil.getLocalDateTime("2023-11-21 12:00:00") );
+		ex.setFechaCreacion( DateUtil.getLocalDateTime("2023-11-21 12:30:00") );
+		ex.setUsuarioCreacion( new Usuario(1));
+		//DAOFactory.getExposicionDao().insertar(ex);
+		System.out.println(ex.toString());
+		
 		
 		/*
 		System.out.println("");
