@@ -1,11 +1,8 @@
 package py.com.ucsa.jdbc;
 
-import java.sql.Date;
 
 import py.com.ucsa.jdbc.dao.DAOFactory;
 import py.com.ucsa.jdbc.dto.Exposicion;
-import py.com.ucsa.jdbc.dto.Opcion;
-import py.com.ucsa.jdbc.dto.Socio;
 import py.com.ucsa.jdbc.dto.Usuario;
 import py.com.ucsa.utilites.DateUtil;
 
@@ -39,13 +36,17 @@ public class TestSocio {
 		ex.setDescripcion("expo cabal");
 		ex.setOrganiza("bepsa lab");;
 		ex.setFechaExpo( DateUtil.getLocalDateTime("2023-11-21 12:00:00") );
-		ex.setFechaCreacion( DateUtil.getLocalDateTime("2023-11-21 12:30:00") );
+		ex.setFechaCreacion( DateUtil.getLocalDateTime("2023-11-22 12:30:00") );
 		ex.setUsuarioCreacion( new Usuario(1));
 		//DAOFactory.getExposicionDao().insertar(ex);
 		//DAOFactory.getExposicionDao().modificar(ex);
 		System.out.println(ex.toString());
 		
-		
+		System.out.println("---");
+		System.out.println("5 DAOFactory.getParticExpoSocioDao().listar()");
+		DAOFactory.getParticExpoSocioDao().listar().forEach((n) -> {
+			System.out.println(n.toString());
+		});
 		/*
 		System.out.println("");
 		System.out.println("2 DAOFactory.getSocioDao().insertar()");

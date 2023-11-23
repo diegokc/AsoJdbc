@@ -9,13 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import py.com.ucsa.jdbc.dao.EstadoSocioDao;
-import py.com.ucsa.jdbc.dto.Dominio;
 import py.com.ucsa.jdbc.dto.EstadoSocio;
-import py.com.ucsa.jdbc.dto.Opcion;
 import py.com.ucsa.jdbc.dto.Socio;
-import py.com.ucsa.jdbc.dto.Usuario;
 import py.com.ucsa.utilites.ConexionBD;
-import py.com.ucsa.utilites.DateUtil;
 
 public class EstadoSocioDaoImpl implements EstadoSocioDao {
 

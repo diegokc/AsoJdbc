@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import py.com.ucsa.jdbc.dao.PagoCuotaSocioDao;
-import py.com.ucsa.jdbc.dto.Opcion;
 import py.com.ucsa.jdbc.dto.PagoCuotaSocio;
 import py.com.ucsa.utilites.ConexionBD;
 

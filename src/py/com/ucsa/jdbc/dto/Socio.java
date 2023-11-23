@@ -25,6 +25,13 @@ public class Socio {
 	public Socio(Integer id) {
 		this.id = id;
 	}
+
+	public Socio(Integer id, String nombres, String apellidos, Integer nroSocio) {
+		this.id = id;
+		this.nombres = nombres;
+		this.apellidos = apellidos;
+		this.nroSocio = nroSocio;
+	}
 	
 	public Socio(Integer id, String nombres, String apellidos, String email, Integer nroSocio, Integer nroCedula,
 			LocalDate fechaIngreso, Opcion idEstadoActual, LocalDateTime fechaEstadoActual, boolean fundador,

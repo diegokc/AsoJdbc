@@ -9,13 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import py.com.ucsa.jdbc.dao.DAOFactory;
 import py.com.ucsa.jdbc.dao.OpcionDao;
 import py.com.ucsa.jdbc.dto.Opcion;
-import py.com.ucsa.jdbc.dto.Usuario;
 import py.com.ucsa.jdbc.dto.Dominio;
 import py.com.ucsa.utilites.ConexionBD;
-import py.com.ucsa.utilites.DateUtil;
 
 public class OpcionDaoImpl implements OpcionDao {
 

@@ -13,72 +13,106 @@ public class Exposicion {
 	private String contacto;
 	private LocalDateTime fechaCreacion;
 	private Usuario usuarioCreacion;
-	
-	
+
 	public Exposicion() {
 	}
-	
-	
+
 	public Exposicion(Integer id) {
 		this.id = id;
 	}
-	
-	
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
+
+	public Exposicion(Integer id, String nombre, String descripcion, String organiza, LocalDateTime fechaExpo) {
 		this.id = id;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public String getDescripcion() {
-		return descripcion;
-	}
-	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
-	}
-	public String getOrganiza() {
-		return organiza;
-	}
-	public void setOrganiza(String organiza) {
 		this.organiza = organiza;
-	}
-	public String getUbicacion() {
-		return ubicacion;
-	}
-	public void setUbicacion(String ubicacion) {
-		this.ubicacion = ubicacion;
-	}
-	public LocalDateTime getFechaExpo() {
-		return fechaExpo;
-	}
-	public void setFechaExpo(LocalDateTime fechaExpo) {
 		this.fechaExpo = fechaExpo;
 	}
-	public String getContacto() {
-		return contacto;
-	}
-	public void setContacto(String contacto) {
+
+	public Exposicion(Integer id, String nombre, String descripcion, String organiza, String ubicacion,
+			LocalDateTime fechaExpo, String contacto, LocalDateTime fechaCreacion, Usuario usuarioCreacion) {
+		this.id = id;
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.organiza = organiza;
+		this.ubicacion = ubicacion;
+		this.fechaExpo = fechaExpo;
 		this.contacto = contacto;
-	}
-	public LocalDateTime getFechaCreacion() {
-		return fechaCreacion;
-	}
-	public void setFechaCreacion(LocalDateTime fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
-	}
-	public Usuario getUsuarioCreacion() {
-		return usuarioCreacion;
-	}
-	public void setUsuarioCreacion(Usuario usuarioCreacion) {
 		this.usuarioCreacion = usuarioCreacion;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String getOrganiza() {
+		return organiza;
+	}
+
+	public void setOrganiza(String organiza) {
+		this.organiza = organiza;
+	}
+
+	public String getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+
+	public LocalDateTime getFechaExpo() {
+		return fechaExpo;
+	}
+
+	public void setFechaExpo(LocalDateTime fechaExpo) {
+		this.fechaExpo = fechaExpo;
+	}
+
+	public String getContacto() {
+		return contacto;
+	}
+
+	public void setContacto(String contacto) {
+		this.contacto = contacto;
+	}
+
+	public LocalDateTime getFechaCreacion() {
+		return fechaCreacion;
+	}
+
+	public void setFechaCreacion(LocalDateTime fechaCreacion) {
+		this.fechaCreacion = fechaCreacion;
+	}
+
+	public Usuario getUsuarioCreacion() {
+		return usuarioCreacion;
+	}
+
+	public void setUsuarioCreacion(Usuario usuarioCreacion) {
+		this.usuarioCreacion = usuarioCreacion;
+	}
 
 	@Override
 	public String toString() {
@@ -87,7 +121,4 @@ public class Exposicion {
 				+ ", fechaCreacion=" + fechaCreacion + ", usuarioCreacion=" + usuarioCreacion + "]";
 	}
 
-
-	
-	
 }

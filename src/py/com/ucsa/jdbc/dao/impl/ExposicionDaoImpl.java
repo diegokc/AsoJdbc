@@ -10,7 +10,6 @@ import java.util.List;
 
 import py.com.ucsa.jdbc.dao.ExposicionDao;
 import py.com.ucsa.jdbc.dto.Exposicion;
-import py.com.ucsa.jdbc.dto.Rol;
 import py.com.ucsa.jdbc.dto.Usuario;
 import py.com.ucsa.utilites.ConexionBD;
 import py.com.ucsa.utilites.DateUtil;
@@ -111,7 +110,8 @@ public class ExposicionDaoImpl implements ExposicionDao {
 			ps.setString(4, obj.getUbicacion());
 			ps.setDate(5, DateUtil.getDateAsDateSql(obj.getFechaExpo()) );
 			ps.setString(6, obj.getContacto());
-			ps.setDate(7, DateUtil.getDateAsDateSql(obj.getFechaCreacion()) );
+			//ps.setDate(7, DateUtil.getDateAsDateSql(obj.getFechaCreacion()) );
+			ps.setTimestamp(7, DateUtil.getTimeAsTimeSql(obj.getFechaCreacion()));
 			ps.setInt(8, obj.getUsuarioCreacion().getId() );
 			
 			ps.executeUpdate();
@@ -162,7 +162,8 @@ public class ExposicionDaoImpl implements ExposicionDao {
 			ps.setString(4, obj.getUbicacion());
 			ps.setDate(5, DateUtil.getDateAsDateSql(obj.getFechaExpo()) );
 			ps.setString(6, obj.getContacto());
-			ps.setDate(7, DateUtil.getDateAsDateSql(obj.getFechaCreacion()) );
+			//ps.setDate(7, DateUtil.getDateAsDateSql(obj.getFechaCreacion()) );
+			ps.setTimestamp(7, DateUtil.getTimeAsTimeSql(obj.getFechaCreacion()));
 			ps.setInt(8, obj.getUsuarioCreacion().getId() );
 			
 			ps.setInt(9, obj.getId() );

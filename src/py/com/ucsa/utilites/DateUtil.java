@@ -71,4 +71,9 @@ public class DateUtil {
 
 	}
 
+	public static java.sql.Timestamp getTimeAsTimeSql(LocalDateTime localDateTime) {
+		return java.sql.Timestamp.valueOf(localDateTime);
+	
+	}
+	
 }
